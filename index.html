@@ -23,6 +23,10 @@
                     id="animated-asset"
                     src="assets/asset.glb"
                 ></a-asset-item>
+                <a-asset-item
+                    id="oreo-asset"
+                    src="assets/asset_oreo.gltf"
+                ></a-asset-item>
             </a-assets>
 
             <a-marker
@@ -42,6 +46,25 @@
                     gltf-model="#animated-asset"
                     class="clickable"
                     gesture-handler
+                ></a-entity>
+            </a-marker>
+            <a-marker
+                id="animated-marker"
+                type="pattern"
+                preset="custom"
+                url="assets/marker_oreo.patt"
+                raycaster="objects: .clickable"
+                emitevents="true"
+                cursor="fuse: false; rayOrigin: mouse;"
+                id="markerA"
+            >
+                <a-entity
+                        id="bowser-model-oreo"
+                        scale="4.142574895552385 4.142574895552385 4.142574895552385"
+                        animation-mixer="loop: repeat"
+                        gltf-model="#asset-oreo"
+                        class="clickable"
+                        gesture-handler
                 ></a-entity>
             </a-marker>
 
